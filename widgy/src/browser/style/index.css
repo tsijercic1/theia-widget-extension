@@ -1,0 +1,11 @@
+#widget-container {
+    color: var(--theia-ui-font-color1);
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    background: red;
+}
+
+.pipe{
+    margin: 0 4px;
+}
