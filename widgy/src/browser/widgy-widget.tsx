@@ -2,7 +2,7 @@ import * as React from 'react';
 import { injectable, postConstruct, inject } from 'inversify';
 import { ReactWidget } from '@theia/core/lib/browser/widgets/react-widget';
 import { CommandService, MessageService } from '@theia/core';
-
+import { TaskService } from '@theia/task/lib/browser';
 
 
 @injectable()
@@ -16,6 +16,10 @@ export class WidgyWidget extends ReactWidget {
 
     @inject(CommandService)
     protected readonly commandService!: CommandService;
+
+    @inject(TaskService)
+    protected readonly taskService!: TaskService;
+
 
     @postConstruct()
     protected async init(): Promise < void> {
@@ -35,6 +39,7 @@ export class WidgyWidget extends ReactWidget {
 
     protected displayMessage(): void {
         this.messageService.info('Congratulations: Widgy Widget Successfully Created!');
+        this.taskService.runTaskByLabel('hello');
         // this.commandService.executeCommand('echo "hiiiii" ');
     }
 
