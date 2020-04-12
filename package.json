@@ -9,6 +9,6 @@
     "lerna": "2.4.0"
   },
   "workspaces": [
-    "widgy", "browser-app", "electron-app"
+    "widgy", "browser-app"
   ]
 }

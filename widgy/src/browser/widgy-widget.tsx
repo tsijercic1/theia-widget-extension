@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { injectable, postConstruct, inject } from 'inversify';
 import { ReactWidget } from '@theia/core/lib/browser/widgets/react-widget';
-import {CommandService, MessageService} from '@theia/core';
+import { CommandService, MessageService } from '@theia/core';
+
+
 
 @injectable()
 export class WidgyWidget extends ReactWidget {
@@ -27,9 +29,7 @@ export class WidgyWidget extends ReactWidget {
 
     protected render(): React.ReactNode {
         return <div id='widget-container'>
-            <button className='theia-button secondary' title='Display Message' onClick={_a => this.displayMessage()}>Display Message</button>
-            <span className='pipe'>|</span>
-            <button className='theia-button secondary' title='Display Message' onClick={_a => this.displayMessage()}>Display Message</button>
+            <button className='theia-button' title='Run main' onClick={_a => this.displayMessage()}>Run</button>
         </div>
     }
 

@@ -1,0 +1,42 @@
+0 silly input [ 'prepare' ]
+1 silly flags { _: [ 'run' ], script: 'prepare', args: [] }
+2 verbose rootPath /home/tarik/theia/widget_extension
+3 info version 2.4.0
+4 silly existsSync /home/tarik/theia/widget_extension/VERSION
+5 silly initialize attempt
+6 silly initialize success
+7 silly execute attempt
+8 silly runScriptInPackageStreaming [ 'prepare', [], 'widgy' ]
+9 silly getExecOpts { cwd: '/home/tarik/theia/widget_extension/widgy' }
+10 silly runScriptInPackageStreaming [ 'prepare', [], 'browser-app' ]
+11 silly getExecOpts { cwd: '/home/tarik/theia/widget_extension/browser-app' }
+12 error execute callback with error
+13 error Error: Command failed: npm run prepare
+13 error { Error: Cannot find module '@typefox/monaco-editor-core/package.json'
+13 error     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+13 error     at Function.resolve (internal/modules/cjs/helpers.js:33:19)
+13 error     at ApplicationPackage._moduleResolver (/home/tarik/theia/widget_extension/node_modules/@theia/application-manager/node_modules/@theia/application-package/lib/application-package.js:383:79)
+13 error     at ApplicationPackage.resolveModulePath (/home/tarik/theia/widget_extension/node_modules/@theia/application-manager/node_modules/@theia/application-package/lib/application-package.js:395:58)
+13 error     at WebpackGenerator.resolve (/home/tarik/theia/widget_extension/node_modules/@theia/application-manager/lib/generator/webpack-generator.js:126:25)
+13 error     at /home/tarik/theia/widget_extension/node_modules/@theia/application-manager/lib/generator/webpack-generator.js:130:1016
+13 error     at WebpackGenerator.AbstractGenerator.ifMonaco (/home/tarik/theia/widget_extension/node_modules/@theia/application-manager/lib/generator/abstract-generator.js:118:125)
+13 error     at WebpackGenerator.compileWebpackConfig (/home/tarik/theia/widget_extension/node_modules/@theia/application-manager/lib/generator/webpack-generator.js:130:927)
+13 error     at WebpackGenerator.<anonymous> (/home/tarik/theia/widget_extension/node_modules/@theia/application-manager/lib/generator/webpack-generator.js:78:86)
+13 error     at step (/home/tarik/theia/widget_extension/node_modules/@theia/application-manager/lib/generator/webpack-generator.js:60:23) code: 'MODULE_NOT_FOUND' }
+13 error npm ERR! code ELIFECYCLE
+13 error npm ERR! errno 1
+13 error npm ERR! browser-app@0.0.0 prepare: `theia build --mode development`
+13 error npm ERR! Exit status 1
+13 error npm ERR!
+13 error npm ERR! Failed at the browser-app@0.0.0 prepare script.
+13 error npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+13 error
+13 error npm ERR! A complete log of this run can be found in:
+13 error npm ERR!     /home/tarik/.npm/_logs/2020-04-12T08_39_37_640Z-debug.log
+13 error
+13 error
+13 error > browser-app@0.0.0 prepare /home/tarik/theia/widget_extension/browser-app
+13 error > theia build --mode development
+13 error
+13 error
+13 error     at Promise.all.then.arr (/home/tarik/theia/widget_extension/node_modules/execa/index.js:236:11)

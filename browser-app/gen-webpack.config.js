@@ -22,7 +22,7 @@ const { mode, staticCompression }  = yargs.option('mode', {
 }).argv;
 const development = mode === 'development';
 
-const monacoEditorCorePath = development ? '/home/tarik/theia/widget_extension/node_modules/@typefox/monaco-editor-core/dev/vs' : '/home/tarik/theia/widget_extension/node_modules/@typefox/monaco-editor-core/min/vs';
+const monacoEditorCorePath = development ? '/home/tarik/theia/widget_extension/node_modules/@theia/monaco-editor-core/dev/vs' : '/home/tarik/theia/widget_extension/node_modules/@theia/monaco-editor-core/min/vs';
 const monacoCssLanguagePath = '/home/tarik/theia/widget_extension/node_modules/monaco-css/release/min';
 const monacoHtmlLanguagePath = '/home/tarik/theia/widget_extension/node_modules/monaco-html/release/min';
 
