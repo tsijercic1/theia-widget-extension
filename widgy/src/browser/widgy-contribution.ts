@@ -79,7 +79,7 @@ export class WidgyContribution extends AbstractViewContribution<WidgyWidget> {
     async onStart(app: FrontendApplication): Promise<void> {
         if (!this.workspaceService.opened) {
             this.stateService.reachedState('ready').then(
-                () => this.openView({ reveal: true })
+                () => super.openView({ activate: true, reveal: true, toggle: false })
             );
         }
     }

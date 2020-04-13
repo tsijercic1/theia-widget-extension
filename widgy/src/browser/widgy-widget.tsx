@@ -20,7 +20,6 @@ export class WidgyWidget extends ReactWidget {
     @inject(TaskService)
     protected readonly taskService!: TaskService;
 
-
     @postConstruct()
     protected async init(): Promise < void> {
         this.id = WidgyWidget.ID;
@@ -38,9 +37,7 @@ export class WidgyWidget extends ReactWidget {
     }
 
     protected displayMessage(): void {
-        this.messageService.info('Congratulations: Widgy Widget Successfully Created!');
-        this.taskService.runTaskByLabel('hello');
-        // this.commandService.executeCommand('echo "hiiiii" ');
+        this.taskService.runTaskByLabel('Run');
     }
 
 }
