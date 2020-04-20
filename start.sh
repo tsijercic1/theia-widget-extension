@@ -1,3 +1,3 @@
-yarn prepare
 cd browser-app
-yarn start "$1"  --port 8080
+yarn start "$1" --port 8080 
+
