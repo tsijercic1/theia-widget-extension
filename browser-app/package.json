@@ -3,7 +3,6 @@
   "name": "browser-app",
   "version": "0.0.0",
   "dependencies": {
-    "@theia/api-samples": "next",
     "@theia/callhierarchy": "next",
     "@theia/console": "next",
     "@theia/core": "next",
