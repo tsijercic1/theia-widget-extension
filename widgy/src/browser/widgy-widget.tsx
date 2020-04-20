@@ -25,7 +25,7 @@ export class WidgyWidget extends ReactWidget {
         this.id = WidgyWidget.ID;
         this.title.label = WidgyWidget.LABEL;
         this.title.caption = WidgyWidget.LABEL;
-        this.title.closable = true;
+        this.title.closable = false;
         this.title.iconClass = 'fa fa-window-maximize'; // example widget icon.
         this.update();
     }

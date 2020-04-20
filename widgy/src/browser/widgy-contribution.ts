@@ -54,7 +54,7 @@ export class WidgyContribution extends AbstractViewContribution<WidgyWidget> {
      */
     registerCommands(commands: CommandRegistry): void {
         commands.registerCommand(WidgyCommand, {
-            execute: () => super.openView({ activate: true, reveal: true, toggle: false })
+            execute: () => super.openView({ activate: true, reveal: true, toggle: true })
         });
     }
 
@@ -79,8 +79,11 @@ export class WidgyContribution extends AbstractViewContribution<WidgyWidget> {
     async onStart(app: FrontendApplication): Promise<void> {
         if (!this.workspaceService.opened) {
             this.stateService.reachedState('ready').then(
-                () => super.openView({ activate: true, reveal: true, toggle: false })
+                () => this.openView({ activate: true, reveal: true, toggle: true })
             );
         }
+        app.shell.activateWidget(WidgyWidget.ID);
     }
+
+
 }

@@ -8,35 +8,29 @@
 7 silly execute attempt
 8 silly runScriptInPackageStreaming [ 'prepare', [], 'widgy' ]
 9 silly getExecOpts { cwd: '/home/tarik/theia/widget_extension/widgy' }
-10 silly runScriptInPackageStreaming [ 'prepare', [], 'browser-app' ]
-11 silly getExecOpts { cwd: '/home/tarik/theia/widget_extension/browser-app' }
-12 error execute callback with error
-13 error Error: Command failed: npm run prepare
-13 error { Error: Cannot find module '@typefox/monaco-editor-core/package.json'
-13 error     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
-13 error     at Function.resolve (internal/modules/cjs/helpers.js:33:19)
-13 error     at ApplicationPackage._moduleResolver (/home/tarik/theia/widget_extension/node_modules/@theia/application-manager/node_modules/@theia/application-package/lib/application-package.js:383:79)
-13 error     at ApplicationPackage.resolveModulePath (/home/tarik/theia/widget_extension/node_modules/@theia/application-manager/node_modules/@theia/application-package/lib/application-package.js:395:58)
-13 error     at WebpackGenerator.resolve (/home/tarik/theia/widget_extension/node_modules/@theia/application-manager/lib/generator/webpack-generator.js:126:25)
-13 error     at /home/tarik/theia/widget_extension/node_modules/@theia/application-manager/lib/generator/webpack-generator.js:130:1016
-13 error     at WebpackGenerator.AbstractGenerator.ifMonaco (/home/tarik/theia/widget_extension/node_modules/@theia/application-manager/lib/generator/abstract-generator.js:118:125)
-13 error     at WebpackGenerator.compileWebpackConfig (/home/tarik/theia/widget_extension/node_modules/@theia/application-manager/lib/generator/webpack-generator.js:130:927)
-13 error     at WebpackGenerator.<anonymous> (/home/tarik/theia/widget_extension/node_modules/@theia/application-manager/lib/generator/webpack-generator.js:78:86)
-13 error     at step (/home/tarik/theia/widget_extension/node_modules/@theia/application-manager/lib/generator/webpack-generator.js:60:23) code: 'MODULE_NOT_FOUND' }
-13 error npm ERR! code ELIFECYCLE
-13 error npm ERR! errno 1
-13 error npm ERR! browser-app@0.0.0 prepare: `theia build --mode development`
-13 error npm ERR! Exit status 1
-13 error npm ERR!
-13 error npm ERR! Failed at the browser-app@0.0.0 prepare script.
-13 error npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
-13 error
-13 error npm ERR! A complete log of this run can be found in:
-13 error npm ERR!     /home/tarik/.npm/_logs/2020-04-12T08_39_37_640Z-debug.log
-13 error
-13 error
-13 error > browser-app@0.0.0 prepare /home/tarik/theia/widget_extension/browser-app
-13 error > theia build --mode development
-13 error
-13 error
-13 error     at Promise.all.then.arr (/home/tarik/theia/widget_extension/node_modules/execa/index.js:236:11)
+10 error execute callback with error
+11 error Error: Command failed: npm run prepare
+11 error warning package.json: No license field
+11 error warning package.json: No license field
+11 error error Command failed with exit code 2.
+11 error npm ERR! code ELIFECYCLE
+11 error npm ERR! errno 2
+11 error npm ERR! widgy@0.0.0 prepare: `yarn run clean && yarn run build`
+11 error npm ERR! Exit status 2
+11 error npm ERR!
+11 error npm ERR! Failed at the widgy@0.0.0 prepare script.
+11 error npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+11 error
+11 error npm ERR! A complete log of this run can be found in:
+11 error npm ERR!     /home/tarik/.npm/_logs/2020-04-13T13_46_51_348Z-debug.log
+11 error
+11 error
+11 error > widgy@0.0.0 prepare /home/tarik/theia/widget_extension/widgy
+11 error > yarn run clean && yarn run build
+11 error
+11 error $ rimraf lib
+11 error $ tsc
+11 error src/browser/widgy-contribution.ts(4,35): error TS6133: 'FrontendApplication' is declared but its value is never read.
+11 error info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+11 error
+11 error     at Promise.all.then.arr (/home/tarik/theia/widget_extension/node_modules/execa/index.js:236:11)
