@@ -1,15 +1,15 @@
 import { injectable, inject } from 'inversify';
 import { MenuModelRegistry } from '@theia/core';
-import { WidgyWidget } from './widgy-widget';
+import { RunButtonWidget } from './run-button-widget';
 import {AbstractViewContribution, FrontendApplication} from '@theia/core/lib/browser';
 import { Command, CommandRegistry } from '@theia/core/lib/common/command';
 import {FrontendApplicationStateService} from "@theia/core/lib/browser/frontend-application-state";
 import { WorkspaceService } from '@theia/workspace/lib/browser';
 
-export const WidgyCommand: Command = { id: 'widgy:command' };
+export const RunButtonCommand: Command = { id: 'run-button:command' };
 
 @injectable()
-export class WidgyContribution extends AbstractViewContribution<WidgyWidget> {
+export class RunButtonContribution extends AbstractViewContribution<RunButtonWidget> {
 
     @inject(FrontendApplicationStateService)
     protected readonly stateService: FrontendApplicationStateService;
@@ -27,10 +27,10 @@ export class WidgyContribution extends AbstractViewContribution<WidgyWidget> {
      */
     constructor() {
         super({
-            widgetId: WidgyWidget.ID,
-            widgetName: WidgyWidget.LABEL,
+            widgetId: RunButtonWidget.ID,
+            widgetName: RunButtonWidget.LABEL,
             defaultWidgetOptions: { area: 'top' },
-            toggleCommandId: WidgyCommand.id
+            toggleCommandId: RunButtonCommand.id
         });
     }
 
@@ -53,7 +53,7 @@ export class WidgyContribution extends AbstractViewContribution<WidgyWidget> {
      * @param commands
      */
     registerCommands(commands: CommandRegistry): void {
-        commands.registerCommand(WidgyCommand, {
+        commands.registerCommand(RunButtonCommand, {
             execute: () => super.openView({ activate: true, reveal: true, toggle: true })
         });
     }
@@ -82,7 +82,7 @@ export class WidgyContribution extends AbstractViewContribution<WidgyWidget> {
                 () => this.openView({ activate: true, reveal: true, toggle: true })
             );
         }
-        app.shell.activateWidget(WidgyWidget.ID);
+        app.shell.activateWidget(RunButtonWidget.ID);
     }
 
 

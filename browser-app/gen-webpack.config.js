@@ -1,6 +1,6 @@
 /**
  * Don't touch this file. It will be renerated by theia build.
- * To customize webpack configuration change /home/tarik/theia/widget_extension/browser-app/webpack.config.js
+ * To customize webpack configuration change /home/rijad/theia-widget-extension/browser-app/webpack.config.js
  */
 // @ts-check
 const path = require('path');
@@ -22,22 +22,12 @@ const { mode, staticCompression }  = yargs.option('mode', {
 }).argv;
 const development = mode === 'development';
 
-const monacoEditorCorePath = development ? '/home/tarik/theia/widget_extension/node_modules/@theia/monaco-editor-core/dev/vs' : '/home/tarik/theia/widget_extension/node_modules/@theia/monaco-editor-core/min/vs';
-const monacoCssLanguagePath = '/home/tarik/theia/widget_extension/node_modules/monaco-css/release/min';
-const monacoHtmlLanguagePath = '/home/tarik/theia/widget_extension/node_modules/monaco-html/release/min';
+const monacoEditorCorePath = development ? '/home/rijad/theia-widget-extension/node_modules/@theia/monaco-editor-core/dev/vs' : '/home/rijad/theia-widget-extension/node_modules/@theia/monaco-editor-core/min/vs';
 
 const plugins = [new CopyWebpackPlugin([
     {
         from: monacoEditorCorePath,
         to: 'vs'
-    },
-    {
-        from: monacoCssLanguagePath,
-        to: 'vs/language/css'
-    },
-    {
-        from: monacoHtmlLanguagePath,
-        to: 'vs/language/html'
     }
 ])];
 // it should go after copy-plugin in order to compress monaco as well

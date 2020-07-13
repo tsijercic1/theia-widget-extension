@@ -1,5 +1,5 @@
 {
-  "name": "widgy",
+  "name": "run-button",
   "keywords": [
     "theia-extension"
   ],
@@ -9,12 +9,12 @@
     "src"
   ],
   "dependencies": {
-    "@theia/core": "next",
-    "@theia/task":"next"
+    "@theia/core": "latest",
+    "@theia/task":"latest"
   },
   "devDependencies": {
     "rimraf": "3.0.2",
-    "typescript": "next"
+    "typescript": "latest"
   },
   "scripts": {
     "prepare": "yarn run clean && yarn run build",
@@ -24,7 +24,7 @@
   },
   "theiaExtensions": [
     {
-      "frontend": "lib/browser/widgy-frontend-module"
+      "frontend": "lib/browser/run-button-frontend-module"
     }
   ]
 }

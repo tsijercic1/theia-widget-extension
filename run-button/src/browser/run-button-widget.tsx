@@ -6,10 +6,10 @@ import { TaskService } from '@theia/task/lib/browser';
 
 
 @injectable()
-export class WidgyWidget extends ReactWidget {
+export class RunButtonWidget extends ReactWidget {
 
-    static readonly ID = 'widgy:widget';
-    static readonly LABEL = 'Widgy Widget';
+    static readonly ID = 'run-button:widget';
+    static readonly LABEL = 'RunButton Widget';
 
     @inject(MessageService)
     protected readonly messageService!: MessageService;
@@ -22,9 +22,9 @@ export class WidgyWidget extends ReactWidget {
 
     @postConstruct()
     protected async init(): Promise < void> {
-        this.id = WidgyWidget.ID;
-        this.title.label = WidgyWidget.LABEL;
-        this.title.caption = WidgyWidget.LABEL;
+        this.id = RunButtonWidget.ID;
+        this.title.label = RunButtonWidget.LABEL;
+        this.title.caption = RunButtonWidget.LABEL;
         this.title.closable = false;
         this.title.iconClass = 'fa fa-window-maximize'; // example widget icon.
         this.update();
