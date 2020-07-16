@@ -3,4 +3,4 @@ lib/
 src-gen/
 plugins/
 yarn.lock
-**gen-webpack**
+**webpack**
